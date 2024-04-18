@@ -17,6 +17,7 @@ const Todo = ({ todo, onUpdate, onDelete, onChange, editable }) => {
                         <h4
                             onClick={() => onUpdate({ ...todo, ['completed']: !todo.completed })}
                             className={todo.completed ? "Todo-task completed" : "Todo-task"}
+                            style={{ cursor: 'pointer' }}
                         >{todo.task}</h4>
                     )
             }
