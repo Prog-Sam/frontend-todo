@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.back-ground-level-0 {
+  background-color: #7c8596;
+}
+
+.back-ground-level-1 {
+  background-color: #f8f8f8;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
