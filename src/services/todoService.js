@@ -29,6 +29,6 @@ export async function updateTodo(todo) {
 }
 
 export async function removeTodo(id) {
-    let todos = await http.delete(`/todos/${todo.it}`);
+    let todos = await http.delete(`/todos/${id}`);
     return todos;
 }
