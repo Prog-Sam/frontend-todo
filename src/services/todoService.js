@@ -32,3 +32,6 @@ export async function removeTodo(id) {
     let todos = await http.delete(`/todos/${id}`);
     return todos;
 }
+
+//An example of my Axios restful convention-ready service.
+// For Contacting the backend using http methods.

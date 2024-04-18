@@ -24,3 +24,5 @@ export default {
     put: axios.put,
     delete: axios.delete,
 };
+
+//Created a pipeline for every backend calls. We can mutate the request or response here, depending on your choice

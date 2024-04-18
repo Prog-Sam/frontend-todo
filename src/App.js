@@ -2,6 +2,9 @@ import TodoList from './components/TodoList';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// The main App, better just put general things here like context and div markups.
+// Avoid Pollution
+
 function App() {
 
   return (

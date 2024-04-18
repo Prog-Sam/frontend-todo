@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+// Normally, one form is used for updating and saving, but the siuation here is different
 const UpdateTodoForm = ({ data, setEditable, onUpdate }) => {
+    // created a local todo state to mutate and send to the database later
     const [todo, setTodo] = useState({ ...data });
 
     const handleSubmit = async (e) => {

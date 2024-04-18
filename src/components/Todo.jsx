@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import '../css/Todo.css';
 import UpdateTodoForm from './UpdateTodoForm';
 
 const Todo = ({ todo, onUpdate, onDelete }) => {
+    //added as a condition to dynamically render either the edit form or the todo item
     const [editable, setEditable] = useState(false);
 
+    // Added Updateform here for convenience's sake because the test's time is limited
     return (<div key={todo.id} className="d-flex justify-content-start border border-secondary">
         {!editable &&
             <>
