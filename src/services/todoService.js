@@ -16,8 +16,8 @@ export async function saveTodo(todo) {
     let localTodo = { ...todo };
     delete localTodo['id'];
 
-    let todos = await http.post(`/todos`, localTodo);
-    return todos;
+    let todoInDb = await http.post(`/todos`, localTodo);
+    return todoInDb;
 }
 
 export async function updateTodo(todo) {
