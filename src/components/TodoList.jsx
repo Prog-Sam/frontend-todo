@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getTodos } from '../services/todoService';
+import { getTodos, removeTodo } from '../services/todoService';
 import '../App.css';
 
 import Todo from './Todo';
@@ -22,8 +22,9 @@ const TodoList = () => {
         console.log(event);
     }
 
-    const handleDelete = (id) => {
-        console.log(id);
+    const handleDelete = async (id) => {
+        const { data } = await removeTodo(id);
+        setTodos(data);
     }
 
 
