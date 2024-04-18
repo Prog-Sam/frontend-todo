@@ -6,7 +6,6 @@ import Todo from './Todo';
 import NewTodoForm from './NewTodoForm';
 
 const TodoList = () => {
-    const [editableId, setEditableId] = useState(0);
     const [todos, setTodos] = useState([]);
 
     const populateTodos = async () => {
@@ -17,16 +16,10 @@ const TodoList = () => {
         populateTodos();
     }, [])
 
-
-    const handleChange = (event) => {
-        console.log(event);
-    }
-
     const handleDelete = async (id) => {
         const { data } = await removeTodo(id);
         setTodos(data);
     }
-
 
     const handleUpdate = async (todo) => {
         const { data } = await updateTodo(todo);
@@ -42,10 +35,8 @@ const TodoList = () => {
             {todos.length > 0 && todos.map((todo) => (
                 <Todo
                     todo={todo}
-                    onChange={handleChange}
                     onDelete={handleDelete}
                     onUpdate={handleUpdate}
-                    editable={todo.id == editableId ? true : false}
                 />
             ))}
             <hr />
