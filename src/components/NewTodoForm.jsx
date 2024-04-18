@@ -4,7 +4,7 @@ import { saveTodo } from "../services/todoService";
 
 //Schema for validation added here
 
-const TodoForm = ({ refreshTodos }) => {
+const NewTodoForm = ({ refreshTodos }) => {
     //Initialize State
     const [todo, setTodo] = useState({ task: '', completed: false });
 
@@ -43,4 +43,4 @@ const TodoForm = ({ refreshTodos }) => {
     );
 }
 
-export default TodoForm;
+export default NewTodoForm;

@@ -3,7 +3,7 @@ import { getTodos } from '../services/todoService';
 import '../App.css';
 
 import Todo from './Todo';
-import TodoForm from './TodoForm';
+import NewTodoForm from './NewTodoForm';
 
 const TodoList = () => {
     const [editableId, setEditableId] = useState(0);
@@ -45,7 +45,7 @@ const TodoList = () => {
                     editable={todo.id == editableId ? true : false}
                 />
             ))}
-            <TodoForm refreshTodos={populateTodos} />
+            <NewTodoForm refreshTodos={populateTodos} />
         </div>
     );
 }
